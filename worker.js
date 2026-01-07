@@ -1,7 +1,7 @@
 const { isMainThread, threadId } = require("worker_threads");
 
-console.log("a", process.pid, isMainThread, threadId);
+console.log("worker start", `pid=${process.pid} isMain=${isMainThread} TID=${threadId}`);
 
 setTimeout(() => {
-  console.log("b");
+  console.log("worker end");
 }, 5 * 60 * 1000);
